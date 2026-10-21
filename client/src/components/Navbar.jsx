@@ -1,10 +1,10 @@
-
+import { Link } from "react-router-dom";
 function Navbar() {
   return (
     <nav className="sticky top-0 z-50 border-b border-green-900/20 bg-white/95 shadow-sm backdrop-blur-md">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-10">
 
-        {/* Brand */}
+
         <a href="/" className="flex items-center gap-3">
           <div className="flex h-11 w-11 items-center justify-center">
             <img
@@ -24,7 +24,7 @@ function Navbar() {
           </div>
         </a>
 
-        {/* Navigation links */}
+
         <div className="hidden items-center gap-8 md:flex">
           <a
             href="/home"
@@ -48,13 +48,12 @@ function Navbar() {
           </a>
         </div>
 
-        {/* Login button */}
-        <button
-          type="button"
-          className="rounded-xl bg-green-900 px-5 py-3 text-sm font-semibold text-white shadow-sm transition-all hover:bg-green-800 hover:shadow-md active:scale-95"
+        <Link
+            to="/login"
+            className="rounded-full bg-green-800 px-6 py-3 text-white"
         >
            Login
-        </button>
+        </Link>
 
       </div>
     </nav>
